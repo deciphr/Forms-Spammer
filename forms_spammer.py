@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 from copy import copy
 from optparse import OptionParser, Option, OptionValueError
@@ -57,7 +57,7 @@ def submit_form(url, entries):
 def main():
     print(welcome_msg)
 
-    usage = "%prog -u <url> -r <responses> [options]"
+    usage = "%prog -u <url> -e <entries> [options]"
     parser = OptionParser(option_class=EntryOption, usage=usage)
     
     parser.add_option("-u", "--url",
