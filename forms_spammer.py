@@ -46,13 +46,7 @@ class EntryOption(Option):
 
 # Main
 def submit_form(url, entries):
-    # headers = {
-    #     'Referer': "url",
-    #     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
-    # }
-
-    response = requests.post(f"{url[:-9]}/formResponse", data=entries)
-    return response
+    return requests.post(f"{url[:-9]}/formResponse", data=entries)
 
 def main():
     print(welcome_msg)
